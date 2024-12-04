@@ -12,8 +12,8 @@ class Guests(models.Model):
     )
 
     title = models.CharField(max_length=200)
-    fisrt_name = models.CharField(max_length=200)
-    last_name = models.CharField(max_length=200)
+    fisrt_name = models.CharField(max_length=200, blank=True, null=True)
+    last_name = models.CharField(max_length=200, blank=True, null=True)
     code = models.CharField(max_length=200)
     companions = models.CharField(max_length=200)
     attendance = models.CharField(
