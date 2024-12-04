@@ -19,7 +19,7 @@ def home(request):
         return redirect("invitado/")
     
     if request.method == "POST":
-        codes = request.POST.get("code").lower()
+        codes = request.POST.get("code").lower().strip()
         template = loader.get_template('index.html')
         try:
             guest = Guests.objects.filter(code=codes).values()
