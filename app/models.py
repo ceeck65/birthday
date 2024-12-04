@@ -25,6 +25,5 @@ class Guests(models.Model):
         verbose_name_plural = 'Invitados'
         ordering = ['-id']
 
-
     def __str__(self):
-        return self.title
+        return f'{self.title} ({self.companions})'
