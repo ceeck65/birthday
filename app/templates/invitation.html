@@ -11,32 +11,29 @@
                 <div class="card col-sm-6">
                     <div class="card-body">
                     <span>
-                        Para mi es un honor que estes acá. He decido celebrar un año más de vída. Con mis seres queridos, y si tu estas es porque eres especial para mi, es una reunión familiar, pero tu presencia es importante.       
+                        Para mi es un honor que estes acá. He decido celebrar un año más de vída. Con mis seres queridos, y tu estas porque eres especial para mi, es una reunión familiar, pero tu presencia es importante.       
                     </span>
                     </div>
                 </div>
             </div>
             
-            <div class="mx-auto" style="width: 1000px;">
-                 <div class="dates">
+            <div class="dates">
                 <div class="row">
-                    <div class="col-6 col-offset-3">
-                        <div class="col-6 col-sm-12 col-md-12">
+                        <div class="col-sm-12 col-md-12">
                             <ul class="mt-8">
                                 <li><strong>📆 Fecha:</strong> Sábado 7 de diciembre de 2024</li>
                                 <li><strong>✅ Válido:</strong> <span>({{ obj.companions }}) Persona</span></li>
                             </ul>
                         </div>
-                        <div class="col-6 col-sm-12 col-md-12">
+                        <div class="col-sm-12 col-md-12">
                             <ul>
                                 <li><strong>⏱️ Hora:</strong> 7:00 PM</li>
                                 <li><strong>📍 Lugar:</strong> El Roble Sector 4, calle Alvarado. Casa de Belén.</li>
                             </ul>
                         </div>
-                    </div>
                 </div>
             </div>
-            </div>
+     
                         
             
             
@@ -109,10 +106,11 @@
             margin-top: 2.4%;
             border-radius: 5px;
             width: 50%;
-            background: url('{% static "/img/vintage2.jpg" %}');
+            margin-left: 25%;
+            background: url('{% static "/img/vintage.jpg" %}');
             background-position: center;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: 100%;
             opacity: 0.85;
         }
 
@@ -154,6 +152,17 @@
             li {
                 padding: 2px;
                 font-size: 0.85em;
+            }
+            
+            
+            .dates {
+                margin-top: 2.4%;
+                border-radius: 5px;
+                width: 80%;
+                margin-left: 15%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
             }
 
         }
