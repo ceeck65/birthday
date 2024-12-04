@@ -11,7 +11,6 @@ class Guests(models.Model):
         ('maybe', 'Tal vez'),
     )
 
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='guest')
     title = models.CharField(max_length=200)
     fisrt_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
