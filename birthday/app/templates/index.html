@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+    <div class="background">
+
+        <div class="contenedor">
+			<h1  class="">Celebra mi cumpleaños. Ingresa el código...<span>&#160;</span></h1>
+		</div>
+        <div class="form">
+            <span class="error">{{ error }}</span>
+            <form action="" method="post" class="form text-center">
+            {% csrf_token %}
+
+                <input type="text" name="code" required />
+                <input type="hidden" name="password" value="Invitado@M1Cumpl3*" />
+                <button type="submit">Ingresar</button>
+
+            </form>
+        </div>
+    </div>
+<style>
+
+    .background {
+        background: url('{% static "/img/happybirthday.jpg" %}');
+         height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        
+    }
+
+    h1 {
+        position: relative;
+        margin-top: 2%;
+        margin-left: 38%;
+        color: aliceblue;
+    }
+
+
+    .contenedor {
+        position: absolute;
+        width: 100%;
+        float: left;
+        margin-top: 22%;
+    }
+	
+    .form {
+        position: absolute;
+        margin-top: 28%;
+        margin-left: 38%;
+    }
+
+
+    h1 { 
+        position: relative; 
+        float: left;
+        background: #271e1f;
+        color: #fff;
+        font-size: 1.2em;
+        height: 2em;
+        width: 27%;
+    }
+
+    h1 span {
+        position:absolute;
+        right:0;
+        width:0;
+        background: #271e1f ;
+        border-left: 1px solid #000;
+        animation: escribir 5s steps(30) infinite alternate;
+    }
+
+    @keyframes escribir {
+        from { width: 100% }
+        to { width:0 }
+    }
+        
+    </style>
+    
+
+
+{% endblock %}

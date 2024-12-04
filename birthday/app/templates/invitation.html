@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% for obj in data %}
+
+    <div class="background">
+
+        <h1 class="text-center title">¡Hola, {{ obj.title }}! 😊. Gracias, por aceptar mi invitación 🎉</h1>
+
+        <div class="card col-sm-6 col-sm-offset-1">
+            <div class="card-body">
+                <span>
+                    Para mi es un honor que estes acá. He decido celebrar un año más de vída. Con mis seres queridos, y si tu estas es porque eres especial para mi, es una reunión familiar, pero tu presencia es importante.       
+                </span>
+            </div>
+        </div>
+
+        <div class="dates">
+            <div class="row">
+                <div class="col-6 col-sm-6 col-md-6">
+                    <ul>
+                    <li><strong>📆 Fecha:</strong> Sábado 7 de diciembre de 2024</li>
+                    <li><strong>✅ Válido:</strong> <span>({{ obj.companions }}) Persona</span></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6">
+                    <ul>
+                    <li><strong>⏱️ Hora:</strong> 7:00 PM</li>
+                    <li><strong>📍 Lugar:</strong> El Roble Sector 4, calle Alvarado. Casa de Belén.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+{% endfor %}    
+
+
+<style>
+
+.background {
+        background: url('{% static "/img/cumple.jpg" %}');
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative; 
+    }
+
+    .title {
+        padding-top: 14%;
+        margin-bottom: 25px;
+        font-family: "Knewave", system-ui;
+        font-weight: 400;
+        font-size: 2.5em;
+        font-style: normal;
+        color: rgb(82, 152, 231);
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+
+    .card-body {
+        padding-top: 14%;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 400;
+        font-size: 1.55em;
+        color: #3c4044;
+    }
+
+    .card {
+        background: url('{% static "/img/vintage2.jpg" %}');
+        height: 38.5%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 25%;
+        border-radius: 5px 50px 5px 50px;
+       
+    }
+
+
+    .dates {
+        margin-top: 2.4%;
+        margin-left: 25%;
+        border-radius: 5px;
+        width: 50%;
+        background: url('{% static "/img/party2.jpg" %}');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.85;
+    }
+
+    li {
+        padding: 5px;
+        list-style-type: none;
+        font-size: 1.2em;
+    }
+    
+
+</style>
+
+
+
+{% endblock %} 
