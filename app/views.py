@@ -30,7 +30,7 @@ def home(request):
             else:
                 print("no existe")
                 context = {
-                    'error': 'Lo siento No estas invitado :(',
+                    'error': '¡Lo siento No estas invitado!...🥺',
                 }
                 return HttpResponse(template.render(context, request))
         except Exception as e:
